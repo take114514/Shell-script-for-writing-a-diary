@@ -16,4 +16,4 @@ if [ ! -e "diaryfile" ];then
 date '+%Y-%m-%d' > "$diaryfile"
 fi
 
-vim "${directory}/$(date '+%Y-%m-%d').txt
+vim "$diaryfile"
