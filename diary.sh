@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #日記データの保存ディレクトリの引数
-qdirectory="${HOME}/diary"
+directory="${HOME}/diary"
 
 #データ保存ディレクトリがなければホームディレクトリ直下に作成する
 if [ ! -d "$directory" ];then
