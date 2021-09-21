@@ -16,4 +16,5 @@ if [ ! -e "diaryfile" ];then
 date '+%Y-%m-%d' > "$diaryfile"
 fi
 
-vim "$diaryfile"
+#vimの起動および"$diaryfile"に実行権限を付与する
+vim "$diaryfile" && chmod 755 ""$diaryfile""
