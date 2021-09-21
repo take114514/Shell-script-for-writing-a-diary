@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#日記データの保存ディレクトリ
+#日記データの保存ディレクトリの変数
 directory="${HOME}/diary"
 
-#データ保存ディレクトリがなければ作成する
+#データ保存ディレクトリがなければホームディレクトリ直下に作成する
 if [ ! -d "$directory" ];then
 mkdir "$directory"
 fi
