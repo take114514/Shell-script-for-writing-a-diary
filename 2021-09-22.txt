@@ -3,3 +3,5 @@
 echo "#!/bin/bash" > "$1.sh"
 vim "$1.sh"
 chmod 755 $1.sh
+
+
