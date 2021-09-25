@@ -1,0 +1,5 @@
+2021-09-25
+#postgreSQLというデータベースを指定、apiモードでの作成
+ rails new line-bot --database=postgresql --apils
+ #userモデルの作成
+  bundle exec rails generate model User line_id:string 
