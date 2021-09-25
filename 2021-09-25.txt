@@ -3,3 +3,9 @@
  rails new line-bot --database=postgresql --apils
  #userモデルの作成
   bundle exec rails generate model User line_id:string 
+  #.to_i=integer型に表示
+  min_per = 20
+  if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
+  # .multicast=Send messages to multiple users using userIds.(userIdsを使用している複数のユーザーにメッセージを送る)
+  response = client.multicast(user_ids,message)
+        
