@@ -1,0 +1,7 @@
+2021-10-25
+今日やったこと
+・wantedlyのプロフィール作成
+・Ruby on Railsの復習（Youtube）
+・Qiitaの記事作成(SQLについて学んだこと)
+・AWSでEC2内にDocker環境の構築
+
