@@ -2,4 +2,6 @@
 #>>でecho 'export PATH="$HOME/.rbenv/bin:$PATH"'の内容を~/.bash_profileに表記する
 #これにより$HOME/.rbenv/binにパスを通すことができる
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-
+#--versionは-vとして使用することができる
+git  --version
+git -v
