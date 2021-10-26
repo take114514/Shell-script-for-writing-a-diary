@@ -1,0 +1,91 @@
+2021-10-26
+PostgreSQLのコマンド確認記録
+postgres=# SELECT Shohin_id,
+postgres-# FROM Shohin;
+ERROR:  syntax error at or near "FROM"
+LINE 2: FROM Shohin;
+        ^
+postgres=# SELECT shohin_id,
+FROM Shohin;
+ERROR:  syntax error at or near "FROM"
+LINE 2: FROM Shohin;
+        ^
+postgres=# SELECT *
+postgres-# FROM Shohin;
+postgres=# SELECT shohin_id
+postgres-# FROM Shohin;
+ shohin_id
+-----------
+(0 rows)
+
+postgres=# CREATE TABLE Resister;
+ERROR:  syntax error at or near ";"
+LINE 1: CREATE TABLE Resister;
+                             ^
+postgres=# CREATE TABLE Resister ;
+ERROR:  syntax error at or near ";"
+LINE 1: CREATE TABLE Resister ;
+                              ^
+postgres=# CREATE TABLE Resister;
+ERROR:  syntax error at or near ";"
+LINE 1: CREATE TABLE Resister;
+                             ^
+postgres=# CREATE TABLE Resister
+postgres-# (name VARCHAR(50) NOT NULL,
+postgres(# name2 CHAR(10) ,
+postgres(# age INTEGER NOT NULL ,
+postgres(# age2 INTEGER ,
+postgres(# PRIMARY KEY (name));
+CREATE TABLE
+postgres=# SELECT *
+postgres-# FROM Resister;
+ name | name2 | age | age2
+------+-------+-----+------
+(0 rows)
+
+postgres=# CREATE TABLE Resister
+(name VARCHAR(50) NOT NULL,
+name2 CHAR(10) ,
+age INTEGER NOT NULL ,
+age2 INTEGER ,
+PRIMARY KEY (name));
+ERROR:  relation "resister" already exists
+postgres=# INSERT INTO Resister (name,name2,age,age2)
+postgres-# VALUES ('taro','hanako',20,30);
+INSERT 0 1
+postgres=# SELECT * FROM Resister;
+ name |   name2    | age | age2
+------+------------+-----+------
+ taro | hanako     |  20 |   30
+(1 row)
+
+postgres=# SELECT *
+FROM Resister;
+ name |   name2    | age | age2
+------+------------+-----+------
+ taro | hanako     |  20 |   30
+(1 row)
+
+postgres=# SELECT age
+FROM Resister;
+ age
+-----
+  20
+(1 row)
+
+postgres=# INSERT INTO Resister (name,name2,age,age2)
+VALUES ('','',,);
+ERROR:  syntax error at or near ","
+LINE 2: VALUES ('','',,);
+                      ^
+postgres=# INSERT INTO Resister (name,name2,age,age2)
+VALUES ('toro','',30,40);
+INSERT 0 1
+postgres=# SELECT *
+FROM Resister;
+ name |   name2    | age | age2
+------+------------+-----+------
+ taro | hanako     |  20 |   30
+ toro |            |  30 |   40
+(2 rows)
+
