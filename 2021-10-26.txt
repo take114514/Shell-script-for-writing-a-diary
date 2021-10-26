@@ -89,3 +89,12 @@ FROM Resister;
  toro |            |  30 |   40
 (2 rows)
 
+postgres=# DELETE FROM Resister
+postgres-# WHERE name = 'toro';
+DELETE 1
+postgres=# SELECT *
+FROM Resister;
+ name |   name2    | age | age2
+------+------------+-----+------
+ taro | hanako     |  20 |   30
+(1 row)
